@@ -1,0 +1,212 @@
+body{
+    font-family: "Jost", serif;
+    margin: 0;
+    max-width: 1400px;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.fa-solid {
+    font-size: 24px;
+}
+
+.logo {
+    font-family: "Madimi One", serif;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.nav-bar{
+    padding-inline: 1.5em;
+    background: #528728;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-icons{
+    display: flex;
+    gap: 20px;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner h2{
+    color: #FFFFFF;
+    font-family: "Jost", serif;
+    font-weight: 400;
+    position: absolute;
+    top: 30px;
+    left: 35px;
+}
+
+.best-sellers-title{
+    font-family: "Jost", serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+.best-sellers-container{
+    display: flex;
+}
+
+.best-sellers-product{
+    display: flex;
+    height: 400px;
+    border: 2px solid #528728;
+}
+.best-sellers-product img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+footer section{
+    background: #000000;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .logo{
+    margin: 0;
+}
+
+footer div{
+    display: flex;
+    gap: 10px;
+}
+
+footer p {
+    color: #FFFFFF;
+    margin: 0;
+}
+
+
+header img{
+    width: 100%;
+    object-fit: cover;
+    height: 220px;
+    display: flex;
+}
+
+.contact-title {
+    text-align: center;
+    margin-top: 0;
+}
+
+#contact{
+    background: #5e8728ab;
+    margin-inline: 14em;
+    border-radius: 15px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-container{
+    background: url(../assets/flowers.jpg) no-repeat;
+    height: 100vh;
+}
+
+input[type=text]{
+    background: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    width: 20em;
+    padding: .5em;
+}
+
+textarea{
+    padding: .5em;
+    width: 20em;
+    border-radius: 5px;
+}
+
+label {
+    margin-bottom: 4px;
+}
+
+#send-button{
+    border: none;
+    border-radius: 5px;
+    background: #FFFFFF;
+    margin-top: 2em;
+    padding: .65em 5.5em;
+}
+
+.matcha-sells{
+    margin: 1em 1em 4.5em;
+    position: relative;
+}
+
+.filters-icons{
+    display: flex;
+    justify-content: space-between;
+    background-color: #D9D9D9;
+    padding: .5em .75em;
+    border-radius: 10px;
+}
+
+.filters-icons h3 {
+    margin: 0;
+}
+
+.offers{
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: .5em;
+}
+
+
+.matcha-offer{
+    display: flex;
+    gap: 1.5em;
+}
+
+.matcha_card{
+    background-color: #FFFFFF;
+    position: relative;
+    padding: 1em;
+    border: 2px solid #528728;
+    border-radius: 20px;
+    width: 300px;
+    max-height: 350px;
+    text-align: center;
+}
+
+.matcha_card img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.matcha-description{
+    margin-top: 0;
+}
+
+.add-to-cart{
+    font-weight: 500;
+    background: #D9D9D9;
+    padding: 4px;
+    border-radius: 50px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.add-to-cart:hover{
+    background-color: #528728;
+}
+
+.fa-arrow-up{
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+}
