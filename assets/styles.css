@@ -1,7 +1,6 @@
 body{
     font-family: "Jost", serif;
     margin: 0;
-    max-width: 1400px;
 }
 
 a {
@@ -90,6 +89,19 @@ footer p {
     margin: 0;
 }
 
+@media(max-width: 600px){
+    .banner h2{
+        font-size: 20px;
+    }
+
+    .best-sellers-container{
+        flex-direction: column;
+    }
+
+    .best-sellers-title{
+        font-size: 22px;
+    }
+}
 
 header img{
     width: 100%;
@@ -147,7 +159,7 @@ label {
 }
 
 .matcha-sells{
-    margin: 1em 1em 4.5em;
+    margin: 1em 1.5em 4.5em;
     position: relative;
 }
 
@@ -172,6 +184,7 @@ label {
 
 .matcha-offer{
     display: flex;
+    justify-content: center;
     gap: 1.5em;
 }
 
@@ -181,18 +194,24 @@ label {
     padding: 1em;
     border: 2px solid #528728;
     border-radius: 20px;
-    width: 300px;
-    max-height: 350px;
+    min-width: 300px;
     text-align: center;
 }
 
 .matcha_card img {
     width: 100%;
+    height: 250px;
     object-fit: cover;
 }
 
 .matcha-description{
-    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.matcha-description p {
+    margin: 0;
 }
 
 .add-to-cart{
@@ -213,6 +232,13 @@ label {
     right: 0;
     bottom: -50px;
 }
+
+@media (max-width: 1250px) {
+    .matcha-offer{
+        flex-direction: column;
+    }
+  }
+  
 
 .about-page{
     height: 100vh;
