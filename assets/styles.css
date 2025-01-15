@@ -5,20 +5,38 @@ body{
 
 a {
     color: #FFFFFF;
+    font-family: "Jost", serif;
     text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 0;
+    background: #2D5226;
+    padding: 1.75em .75em;
+    display: none;
 }
 
 .fa-solid {
     font-size: 24px;
 }
 
-.logo {
+.fa-bars{
+    cursor: pointer;
+}
+
+.fa-bars:hover ul, .fa-bars:clicked ul{
+    display: flex;
+}
+
+.logo a{
     font-family: "Madimi One", serif;
     font-weight: 400;
     color: #FFFFFF;
 }
 
 .nav-bar{
+    height: 80px;
     padding-inline: 1.5em;
     background: #528728;
     display: flex;
@@ -38,32 +56,58 @@ a {
 .banner h2{
     color: #FFFFFF;
     font-family: "Jost", serif;
+    font-size: 22px;
     font-weight: 400;
     position: absolute;
     top: 30px;
     left: 35px;
 }
 
+.banner img{
+    height: 150px;
+}
+
 .best-sellers-title{
     font-family: "Jost", serif;
-    font-weight: 400;
+    font-weight: 500;
     text-align: center;
-    margin-bottom: 0;
 }
 
 .best-sellers-container{
     display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .best-sellers-product{
     display: flex;
-    height: 400px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+    width: 100%;
 }
 
 .best-sellers-product img {
     width: 100%;
-    height: auto;
+    height: 200px;
     object-fit: contain;
+}
+
+.best-sellers-description{
+    font-weight: 400;
+}
+
+.add-best-sellers{
+    padding: .75em 2.5em;
+    border: none;
+    border-radius: 25px;
+    background: #2D5226;
+    color: #FFFFFF;
+}
+
+.fa-star{
+    font-size: 15px;
+    color: #2D5226;
 }
 
 footer section{
@@ -116,8 +160,8 @@ header img{
 }
 
 #contact{
-    background: #5e8728ab;
-    margin-inline: 14em;
+    background: #528728;
+    margin: 3em 14em;
     border-radius: 15px;
     padding: 2em;
     display: flex;
@@ -127,8 +171,7 @@ header img{
 }
 
 .contact-container{
-    background: url(../assets/flowers.jpg) no-repeat;
-    background-size: cover;
+    background: url(../assets/bg.jpg) repeat;
     height: 100vh;
 }
 
@@ -237,27 +280,72 @@ label {
     .matcha-offer{
         flex-direction: column;
     }
-  }
-  
+}
 
+/********** ABOUT PAGE **********/
 .about-page{
-    height: 100vh;
     display: flex;
     text-align: center;
+    gap: 10px;
+    margin: 1.5em 1.5em 0;
+}
+
+.about-container, .services-container{
+    border: 1px solid #2D5226;
+    background: #f0f9a7bd;
+    width: 100%;
+    border-radius: 15px;
+    padding: 1.5em;
 }
 
 .about-title{
+    margin-top: 0;
     font-weight: 600;
+}
+
+.service-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.service-icon h3{
+    margin: 0;
 }
 
 .about-banner{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+
+.about-banner h4{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.about-banner button{
+    font-size: 16px;
+    position: absolute;
+    top: 125px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: -1px -2px 16px 4px rgb(8 8 8 / 35%);
+    padding: .75em 4.5em;
+    background: #528728;
 }
 
 .about-banner img{
     width: 100%;
-    height: 350px;
+    height: 250px;
     object-fit: cover;
+}
+
+@media (max-width: 600px) {
+    .about-page{
+        flex-direction: column;
+        margin-inline: 2.5em;
+    }
 }
