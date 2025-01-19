@@ -19,7 +19,9 @@
                     <i class="fa-solid fa-bars"></i>
                     <ul class="left-menu">
                         <li>
-                            Tout nos produits
+                            <a href="./vente.html">
+                                Tout nos produits
+                            </a>
                         </li>
                         <li>
                             Thé
@@ -32,11 +34,9 @@
                         </li>
                     </ul>
                 </div>
-                <h2 class="logo">
-                    <a href="./index.html">
-                        Matcha tea
-                    </a>
-                </h2>
+                <a href="./index.html" class="logo">
+                    <img src="../assets/Logo_Matcha_Tea.png" alt="logo">
+                </a>
                 <div class="nav-icons">
                     <i class="fa-solid fa-user"></i>
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -48,11 +48,18 @@
         <section class="about-page">
             <div class="about-container">
                 <h3 class="about-title">À propos</h3>
-                Chez Matcha Tea, nous pensons que tout le monde mérite de découvrir le plaisir unique de ce trésor venu tout droit du Japon. 
-                Le matcha est bien plus qu'une simple boisson : c'est un véritable superaliment, une poudre d’un vert intense regorgeant de nutriments, notamment d’antioxydants et de vitamines A, C et E. 
-                Passionnés par cet ingrédient exceptionnel, nous sommes spécialisés dans la création de délicieux thés 
-                à base de matcha. 
-                Que vous préfériez le goût pur du matcha, ou des versions aromatisées comme le matcha vanille ou le matcha fraise, notre entreprise locale s'efforce de confectionner des produits sur mesure pour combler vos papilles.
+                <div>
+                    Chez Matcha Tea, nous pensons que tout le monde mérite de découvrir le plaisir unique de ce trésor venu tout droit du Japon. 
+                    Le matcha est bien plus qu'une simple boisson : c'est un véritable superaliment, une poudre d’un vert intense regorgeant de nutriments, notamment d’antioxydants et de vitamines A, C et E. 
+                    Passionnés par cet ingrédient exceptionnel, nous sommes spécialisés dans la création de délicieux thés 
+                    à base de matcha. 
+                    Que vous préfériez le goût pur du matcha, ou des versions aromatisées comme le matcha vanille ou le matcha fraise, notre entreprise locale s'efforce de confectionner des produits sur mesure pour combler vos papilles.
+                </div>
+                <div class="team-member">
+                    <img src="../assets/team-member1.png" alt="photo de l'équipe">
+                    <img src="../assets/team-member2.jpg" alt="photo de l'équipe">
+                    <img src="../assets/team-member3.jpg" alt="photo de l'équipe">
+                </div>
             </div>
             <div class="services-container">
                 <h3 class="about-title">Nos Services</h3>
@@ -105,5 +112,16 @@
                 </div>
         </section>
     </footer>
+    <script>
+        document.querySelector('.fa-bars').addEventListener('click', function() {
+            const leftMenu = document.querySelector('.left-menu');
+            // Toggle the sliding menu
+            if (leftMenu.style.left === '0px') {
+                leftMenu.style.left = '-350px'; // Slide out (off-screen)
+            } else {
+                leftMenu.style.left = '0px'; // Slide in (visible)
+            }
+        });
+    </script>
 </body>
 </html>

@@ -17,13 +17,17 @@
             <div class="nav-bar">
                 <i class="fa-solid fa-bars"></i>
                 <ul class="left-menu">
-                    <li>Tout nos produits</li>
+                    <li>
+                        <a href="./vente.html">
+                            Tout nos produits
+                        </a>
+                    </li>
                     <li>Thés</li>
                     <li>Accessoires</li>
                     <li>Matcha</li>
                 </ul>
                 <a href="./index.html" class="logo">
-                    <img src="../assets/Logo_Matcha_Tea.png">
+                    <img src="../assets/Logo_Matcha_Tea.png" alt="logo">
                 </a>
                 <div class="nav-icons">
                     <i class="fa-solid fa-user"></i>
@@ -32,7 +36,7 @@
             </div>
         </nav>
         <section class="banner">
-            <img src="../assets/the-matcha-png.png 1.png">
+            <img src="../assets/the-matcha-png.png 1.png" alt="">
             <h2>Découvrez nos nouveaux produits !</h2>
         </section>
     </header>
@@ -159,5 +163,16 @@
                 </div>
         </section>
     </footer>
+    <script>
+        document.querySelector('.fa-bars').addEventListener('click', function() {
+            const leftMenu = document.querySelector('.left-menu');
+            // Toggle the sliding menu
+            if (leftMenu.style.left === '0px') {
+                leftMenu.style.left = '-350px'; // Slide out (off-screen)
+            } else {
+                leftMenu.style.left = '0px'; // Slide in (visible)
+            }
+        });
+    </script>
 </body>
 </html>

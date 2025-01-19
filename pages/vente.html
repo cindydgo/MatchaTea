@@ -17,23 +17,25 @@
             <div class="nav-bar">
                 <i class="fa-solid fa-bars"></i>
                 <ul class="left-menu">
-                    <li>Tout nos produits</li>
+                    <li>
+                        <a href="vente.html">
+                            Tout nos produits
+                        </a>
+                    </li>
                     <li>Thés</li>
                     <li>Accessoires</li>
-                    <li></li>
+                    <li>Matcha</li>
                 </ul>
-                <h2 class="logo">
-                    <a href="./index.html">
-                        
-                    </a>
-                </h2>
+                <a href="./index.html" class="logo">
+                    <img src="../assets/Logo_Matcha_Tea.png" alt="logo">
+                </a>
                 <div class="nav-icons">
                     <i class="fa-solid fa-user"></i>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
             </div>
         </nav>
-        <img src="../assets/banner.jpg" alt="">
+        <img src="../assets/banner.jpg" alt="" class="sell-banner">
     </header>
     <main class="matcha-sells">
         <section>
@@ -44,7 +46,7 @@
             <h4 class="offers">Nos offres du moment</h4>
             <div class="matcha-offer">
                 <div class="matcha_card">
-                    <img src="../assets/matcha-imperial-bio.jpg" alt="">
+                    <img src="../assets/matcha-imperial-bio.jpg" alt="Matcha impérial Bio">
                     <div class="matcha-description">
                         <p>
                             Matcha impérial Bio<br>
@@ -54,7 +56,7 @@
                     </div>
                 </div>
                 <div class="matcha_card">
-                    <img src="../assets/fouet_matcha.jpg" alt="">
+                    <img src="../assets/fouet_matcha.jpg" alt="fouet pour thé matcha en bambou">
                     <div class="matcha-description">
                         <p>
                             Fouet en bambou<br>
@@ -64,7 +66,7 @@
                     </div>
                 </div>
                 <div class="matcha_card">
-                    <img src="../assets/matcha.jpg" alt="">
+                    <img src="../assets/matcha.jpg" alt="Matcha de cérémonie premium Nami">
                     <div  class="matcha-description">
                         <p>
                             Matcha de cérémonie premium Nami<br>
@@ -78,7 +80,7 @@
                     <div  class="matcha-description">
                         <p>
                             Pink matcha<br>
-                            18.5 € 
+                            18,5 € 
                         </p>
                         <p class="add-to-cart">Ajouter au panier</p>
                     </div>
@@ -105,5 +107,16 @@
                 </div>
         </section>
     </footer>
+    <script>
+        document.querySelector('.fa-bars').addEventListener('click', function() {
+            const leftMenu = document.querySelector('.left-menu');
+            // Toggle the sliding menu
+            if (leftMenu.style.left === '0px') {
+                leftMenu.style.left = '-350px'; // Slide out (off-screen)
+            } else {
+                leftMenu.style.left = '0px'; // Slide in (visible)
+            }
+        });
+    </script>
 </body>
 </html>
