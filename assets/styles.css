@@ -15,6 +15,10 @@ ul{
     padding: 0;
 }
 
+button{
+    cursor: pointer;
+}
+
 .left-menu{
     display: none;
     position: absolute;
@@ -23,6 +27,7 @@ ul{
     background: #2D5226;
     padding: 1.5em .75em;
     z-index: 1;
+    transition: ease-in .5s;
 }
 
 .fa-solid {
@@ -36,7 +41,6 @@ ul{
 .fa-bars:hover + .left-menu, .fa-bars:active + .left-menu{
     display: flex;
     flex-direction: column;
-
 }
 
 .logo a{
@@ -57,7 +61,7 @@ ul{
 
 .nav-icons{
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .banner {
@@ -76,6 +80,8 @@ ul{
 
 .banner img{
     height: 150px;
+    width: 100%;
+    object-fit: cover;
 }
 
 .best-sellers-title{
@@ -85,9 +91,17 @@ ul{
 }
 
 .best-sellers-container{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 10px;
+}
+
+@media (max-width: 700px){
+    .best-sellers-container{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .best-sellers-product{
@@ -102,6 +116,10 @@ ul{
     width: 100%;
     height: 200px;
     object-fit: contain;
+}
+
+.gray-star{
+    color: #D9D9D9;
 }
 
 .best-sellers-description{
@@ -158,21 +176,28 @@ footer p {
     }
 }
 
-header img{
+.logo img{
+    display: flex;
     width: 100%;
     object-fit: cover;
-    height: 220px;
-    display: flex;
+    height: 185px;
+}
+
+.contact{
+    height: 100vh;
 }
 
 .contact-title {
     text-align: center;
-    margin-top: 0;
+    margin: 0;
+    padding: 20px 0 0;
+    font-size: 30px;
 }
 
-#contact{
+#contact-form{
     background: #528728eb;;
-    margin: 3em 14em;
+    margin: 2em auto;
+    width: 70%;
     border-radius: 15px;
     padding: 2em;
     display: flex;
@@ -184,19 +209,22 @@ header img{
 .contact-container{
     background: url(../assets/bg.jpg) repeat;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 input[type=text]{
     background: #FFFFFF;
     border: none;
     border-radius: 5px;
-    width: 20em;
+    width: 70%;
     padding: .5em;
 }
 
 textarea{
     padding: .5em;
-    width: 20em;
+    width: 70%;
     border-radius: 5px;
 }
 
@@ -205,11 +233,22 @@ label {
 }
 
 #send-button{
+    font-family: "Jost", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
     border: none;
     border-radius: 5px;
     background: #FFFFFF;
     margin-top: 2em;
-    padding: .65em 5.5em;
+    padding: .65em 0;
+    width: 50%;
+    box-sizing: border-box;
+    transition: all ease-in .1s;
+}
+
+#send-button:hover{
+    background: #2D5226;
 }
 
 .matcha-sells{
@@ -252,7 +291,6 @@ label {
     padding: 1em;
     border: 2px solid #528728;
     border-radius: 20px;
-    min-width: 300px;
     text-align: center;
 }
 
@@ -342,8 +380,8 @@ label {
 }
 
 .about-banner h4{
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 22px;
+    font-weight: 600;
 }
 
 .about-banner button{
@@ -357,6 +395,10 @@ label {
     background: #528728;
 }
 
+.about-banner button:hover{
+    background: #000000;
+}
+
 .about-banner img{
     width: 100%;
     height: 250px;
@@ -368,4 +410,72 @@ label {
         flex-direction: column;
         margin-inline: 2.5em;
     }
+
+    .about-container, .services-container{
+        width: auto;
+    }
+
+    .about-banner h4{
+        font-size: 20px;
+    }
+    
+}
+
+/********* USER PAGE *********/
+.user-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: #fbeedb;
+    padding-top: 20px;
+}
+
+.fa-user-large{
+    font-size: 40px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+#user-form{
+    background: #2D5226;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    padding: 2em 4.5em;
+}
+
+input[type=password],input[type=email]{
+    margin-bottom: 30px;
+    padding: .75em 6em;
+    border-radius: 5px;
+    border: none;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 70%;
+    margin-inline: auto;
+}
+
+.buttons button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Jost", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: .75em 8em;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.connect-button{
+    background: #528728;
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Madimi+One&display=swap" rel="stylesheet">
-    <title>Matcha tea</title>
+    <title>Matcha Tea</title>
 </head>
-<body class="contact-body">
+<body>
     <header>
         <nav>
             <div class="nav-bar">
@@ -20,7 +20,7 @@
                     <li>Tout nos produits</li>
                     <li>Thés</li>
                     <li>Accessoires</li>
-                    <li></li>
+                    <li>Matcha</li>
                 </ul>
                 <a href="./index.html" class="logo">
                     <img src="../assets/Logo_Matcha_Tea.png">
@@ -32,25 +32,19 @@
             </div>
         </nav>
     </header>
-    <main class="contact">
-        <section class="contact-container">
-            <h1 class="contact-title">Contact</h1>
-            <form id="contact-form">
-                <label for="name" id="name">Nom et prénom</label>
-                    <input
-                        type="text"
-                    >
-                </label>
-                <label for="mail" id="mail">Adresse mail</label>
-                    <input
-                        type="text"
-                    >
-                </label>
-                <label for="description" id="description">Description</label>
-                    <textarea
-                    >
-                    </textarea>
-                <button id="send-button">Envoyer</button>
+    <main>
+        <section class="user-container">
+            <h1></h1>
+            <form id="user-form">
+                <i class="fa-solid fa-user-large"></i>
+                <label for="email" name="email">Adresse mail</label>
+                <input type="email" id="email">
+                <label for="password" name="password">Mot de passe</label>
+                <input type="password" id="password">
+                <div class="buttons">
+                    <button class="connect-button">Se Connecter</button>
+                    <button>Créer un compte</button>
+                </div>
             </form>
         </section>
     </main>
@@ -59,7 +53,7 @@
             <h2 class="logo">Matcha tea</h2>
                 <div>
                     <p>
-                        Des questions
+                        FAQ
                     </p>
                     <p>
                         Compte
