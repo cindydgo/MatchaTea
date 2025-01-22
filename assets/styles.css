@@ -554,17 +554,10 @@ input[type=password],input[type=email]{
     background: #528728;
 }
 
-/******** HISTORY PAGE ********/
-
-h1 {
-    text-align: center;
-    font-size: 30px;
-
-}
-
-h2 {
+h1, h2 {
     text-align: center;
     font-size: 24px;
+    margin: 20px 0;
 }
 
 .presentation {
@@ -576,9 +569,7 @@ h2 {
 .block {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-gap: 20px;
     justify-self: center;
     padding: 10px;
 }
@@ -593,8 +584,8 @@ h2 {
     height: 50px;
     border: 2px solid #52B43F;
     color: #000000;
-    position: relative; 
-    overflow: hidden; 
+    position: relative;
+    overflow: hidden;
     text-align: center;
 }
 
@@ -606,23 +597,23 @@ h2 {
 
 .hover-text {
     position: absolute;
-    bottom: -100%; 
+    bottom: -100%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     font-size: 14px;
     color: #000000;
-    transition: bottom 0.3s ease; 
-    visibility: hidden; 
+    transition: bottom 0.3s ease;
+    visibility: hidden;
 }
 
 .border:hover .main-text {
-    visibility: hidden; 
+    visibility: hidden;
 }
 
 .border:hover .hover-text {
-    bottom: 30px; 
-    visibility: visible; 
+    bottom: 30px;
+    visibility: visible;
 }
 
 @media screen and (max-width: 768px) {
@@ -646,7 +637,7 @@ h2 {
 
 .intro h1 {
     font-size: 24px;
-    color: #4CAF50; 
+    color: #4CAF50;
 }
 
 .intro p {
@@ -676,7 +667,7 @@ h2 {
 
 .valeur h2 {
     font-size: 24px;
-    color: #52B43F; 
+    color: #52B43F;
 }
 
 .valeur p {
@@ -685,13 +676,10 @@ h2 {
     line-height: 1.5;
 }
 
-/* Animation des valeurs */
 .valeur:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
-
-/* Carrousel d'images */
 
 .carrousel {
     width: 100%;
@@ -704,7 +692,7 @@ h2 {
 }
 
 .carrousel-images img {
-    width: 33.33%; 
+    width: 33.33%;
     height: 300px;
     flex-shrink: 0;
     object-fit: cover;
