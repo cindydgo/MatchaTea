@@ -6,16 +6,37 @@
     <link rel="stylesheet" href="../assets/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Madimi+One&display=swap" rel="stylesheet">
     <title>Matcha tea</title>
 </head>
 <body>
     <header>
         <nav>
             <div class="nav-bar">
-                <i class="fa-solid fa-bars"></i>
-                <h2 class="logo">Matcha tea</h2>
+                <div>
+                    <i class="fa-solid fa-bars"></i>
+                    <ul class="left-menu">
+                        <li>
+                            <a href="./vente.html">
+                                Tout nos produits
+                            </a>
+                        </li>
+                        <li>
+                            Thé
+                        </li>
+                        <li>
+                            Matcha
+                        </li>
+                        <li>
+                            Accesoires
+                        </li>
+                    </ul>
+                </div>
+                <a href="./index.html" class="logo">
+                    <img src="../assets/Logo_Matcha_Tea.png" alt="logo">
+                </a>
                 <div class="nav-icons">
                     <i class="fa-solid fa-user"></i>
                     <i class="fa-solid fa-cart-shopping"></i>
@@ -24,12 +45,83 @@
         </nav>
     </header>
     <main>
-        <section>
-
+        <section class="about-page">
+            <div class="about-container">
+                <h3 class="about-title">À propos</h3>
+                <div>
+                    Chez Matcha Tea, nous pensons que tout le monde mérite de découvrir le plaisir unique de ce trésor venu tout droit du Japon. 
+                    Le matcha est bien plus qu'une simple boisson : c'est un véritable superaliment, une poudre d’un vert intense regorgeant de nutriments, notamment d’antioxydants et de vitamines A, C et E. 
+                    Passionnés par cet ingrédient exceptionnel, nous sommes spécialisés dans la création de délicieux thés 
+                    à base de matcha. 
+                    Que vous préfériez le goût pur du matcha, ou des versions aromatisées comme le matcha vanille ou le matcha fraise, notre entreprise locale s'efforce de confectionner des produits sur mesure pour combler vos papilles.
+                </div>
+                <div class="team-member">
+                    <img src="../assets/team-member1.png" alt="photo de l'équipe">
+                    <img src="../assets/team-member2.jpg" alt="photo de l'équipe">
+                    <img src="../assets/team-member3.jpg" alt="photo de l'équipe">
+                </div>
+            </div>
+            <div class="services-container">
+                <h3 class="about-title">Nos Services</h3>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <h3>1 - Vente de matcha</h3>
+                        <i class="fa-solid fa-mug-hot"></i>
+                    </div>
+                    <p>Matcha Tea offre un service de vente de matcha de qualité nature ou parfumé. Que ce soit pour déguster seul ou en groupe, notre équipe vous propose le meilleur du thé matcha, directement du Japon.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <h3>2 - Vente d’accessoires matcha</h3>
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </div>
+                    <p>Nous vous proposons des accessoires de qualité pour préparer votre thé matcha comme un véritable professionnel, avec des ustensiles soigneusement sélectionnés.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <h3>3 - Livraison rapide</h3>
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <p>Nous garantissons une livraison rapide et fiable de nos produits, directement chez vous, pour que vous puissiez profiter rapidement de vos produits Matcha Tea.</p>
+                </div>
+            </div>
+        </section>
+        <section class="about-banner">
+            <h4>Pourquoi Matcha Tea ?</h4>
+            <img src="../assets/top-view-matcha-tea-powder-bowl-with-bamboo-whisk.jpg">
+            <button>
+                <a href="./histoire.html">
+                    En savoir plus
+                </a>
+            </button>
         </section>
     </main>
     <footer>
-
+        <section>
+            <h2 class="logo">Matcha tea</h2>
+                <div>
+                    <p>
+                        FAQ
+                    </p>
+                    <p>
+                        Compte
+                    </p>
+                    <p>
+                        À propos de nous
+                    </p>
+                </div>
+        </section>
     </footer>
+    <script>
+        document.querySelector('.fa-bars').addEventListener('click', function() {
+            const leftMenu = document.querySelector('.left-menu');
+            // Toggle the sliding menu
+            if (leftMenu.style.left === '0px') {
+                leftMenu.style.left = '-350px'; // Slide out (off-screen)
+            } else {
+                leftMenu.style.left = '0px'; // Slide in (visible)
+            }
+        });
+    </script>
 </body>
 </html>
