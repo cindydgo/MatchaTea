@@ -4,7 +4,7 @@ body{
 }
 
 a {
-    color: #FFFFFF;
+    color: #000000;
     font-family: "Jost", serif;
     text-decoration: none;
     cursor: pointer;
@@ -29,6 +29,11 @@ button{
     padding: 1.5em .75em;
     z-index: 1;
     transition: left .3s ease-in-out;
+}
+
+.left-menu li:hover, .left-menu a:hover{
+    color: #FFFFFF;
+    cursor: pointer;
 }
 
 .fa-solid {
@@ -58,6 +63,7 @@ button{
 
 .nav-icons{
     display: flex;
+    align-items: center;
     gap: 15px;
 }
 .nav-icons i {
@@ -82,6 +88,10 @@ button{
     height: 150px;
     width: 100%;
     object-fit: cover;
+}
+
+footer a {
+    color: #FFFFFF;
 }
 
 /******** HOME PAGE ********/
@@ -202,7 +212,7 @@ footer p {
 }
 
 #contact-form{
-    background: #528728eb;;
+    background: #528728eb;
     margin: 2em auto;
     width: 70%;
     border-radius: 15px;
@@ -282,6 +292,36 @@ label {
     transition: transform .3s ease-in-out;
 }
 
+.filters-preferences{
+    display: none;
+    position: relative;
+    top: -10px;
+    z-index: -1;
+    padding: 1em 0 0 1em;
+    border-radius: 0 0 5px 5px;
+    box-shadow: -1px 11px 23px -4px rgba(82,135,40,0.7);
+}
+
+.show{
+    display: flex;
+    gap: 15px;
+}
+
+.promo-filter, .price-filter{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.promo-filter .fa-percent, .price-filter .fa-arrow-down{
+    font-size: 1em;
+}
+
+.price-filter .fa-arrow-up{
+    position: static;
+    font-size: 1em;
+}
+
 .offers{
     font-weight: 500;
     font-size: 18px;
@@ -298,6 +338,7 @@ label {
 .matcha_card{
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     position: relative;
     padding: 1em;
     border: 2px solid #528728;
@@ -337,6 +378,11 @@ label {
 }
 
 @media (max-width: 700px) {
+    .filters-preferences{
+        flex-direction: column;
+        gap: 0;
+    }
+
     .matcha-offer{
         flex-direction: column;
     }
@@ -407,6 +453,7 @@ label {
 
 .about-banner button{
     font-size: 16px;
+    font-weight: 500;
     position: absolute;
     top: 125px;
     border: none;
@@ -418,6 +465,10 @@ label {
 
 .about-banner button:hover{
     background: #000000;
+}
+
+.about-banner a {
+    color: #FFFFFF;
 }
 
 .about-banner img{
@@ -497,4 +548,50 @@ input[type=password],input[type=email]{
 
 .connect-button{
     background: #528728;
+}
+
+/***** CLIENT PAGE ******/
+
+.client-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+    margin: 2em;
+    height: 100vh;
+}
+
+.client-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #2D5226;
+    padding: 1em;
+    background: #faebd7;
+    text-align: center;
+}
+
+.client-card h3{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.client-card p {
+    margin: 0;
+    cursor: pointer;
+}
+
+.client-card h3 i {
+    font-size: 1em;
+}
+
+
+@media (max-width: 700px){
+    .client-section{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
 }

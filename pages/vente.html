@@ -18,7 +18,7 @@
                 <i class="fa-solid fa-bars"></i>
                 <ul class="left-menu">
                     <li>
-                        <a href="vente.html">
+                        <a href="/">
                             Tout nos produits
                         </a>
                     </li>
@@ -30,7 +30,9 @@
                     <img src="../assets/Logo_Matcha_Tea.png" alt="logo">
                 </a>
                 <div class="nav-icons">
-                    <i class="fa-solid fa-user"></i>
+                    <a href="./client.html">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
             </div>
@@ -42,6 +44,22 @@
             <div class="filters-icons">
                 <h3 class="filters">Filtres et préferences</h3>
                 <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <div class="filters-preferences">
+                <p>Nouveautés</p>
+                <p class="promo-filter">
+                    Promos
+                    <i class="fa-solid fa-percent"></i>
+                </p>
+                <p class="price-filter">
+                    Prix croissant
+                    <i class="fa-solid fa-arrow-down"></i>
+                </p>
+                <p class="price-filter">
+                    Prix décroissant
+                    <i class="fa-solid fa-arrow-up"></i>
+                </p>
+                <p>Meilleures notes</p>
             </div>
             <h4 class="offers">Nos offres du moment</h4>
             <div class="matcha-offer">
@@ -99,10 +117,19 @@
                         FAQ
                     </p>
                     <p>
-                        Compte
+                        <a href="./user.html">
+                            Compte
+                        </a>
                     </p>
                     <p>
-                        À propos de nous
+                        <a href="./apropos.html">
+                            À propos de nous
+                        </a>
+                    </p>
+                    <p>
+                        <a href="./contact.html">
+                            Contact
+                        </a>
                     </p>
                 </div>
         </section>
@@ -117,6 +144,16 @@
                 leftMenu.style.left = '0px'; // Slide in (visible)
             }
         });
+        
+        const toggleIcon = document.querySelector('.fa-chevron-down');
+        const filtersPreferences = document.querySelector('.filters-preferences');
+        // Ajouter un événement de clic sur l'icône
+        toggleIcon.addEventListener('click', () => {
+        // Basculer l'affichage de la section des filtres
+        filtersPreferences.classList.toggle('show'); // Ajouter ou enlever la classe 'show'
+        // Basculer entre 'fa-chevron-down' et 'fa-chevron-up'
+        toggleIcon.classList.toggle('fa-chevron-up');
+    });
     </script>
 </body>
 </html>
