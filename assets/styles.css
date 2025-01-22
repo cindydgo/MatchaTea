@@ -1,10 +1,6 @@
 body{
     font-family: "Jost", serif;
     margin: 0;
-<<<<<<< HEAD
-   /* max-width: 1400px;*/
-=======
->>>>>>> e927a012e6eb3b4e935bd325ac5f4aee7e1caef9
 }
 
 a {
@@ -49,12 +45,6 @@ button{
 }
 
 
-.logo a{
-    font-family: "Madimi One", serif;
-    font-weight: 400;
-    color: #FFFFFF;
-}
-
 .nav-bar{
     height: 80px;
     padding-inline: 1.5em;
@@ -63,6 +53,15 @@ button{
     align-items: center;
     justify-content: space-between;
     position: relative;
+}
+
+.nav-bar .logo img{
+    display: flex;
+    height: 185px;
+    position: absolute;
+    top: -52px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav-icons{
@@ -181,7 +180,7 @@ footer p {
     margin: 0;
 }
 
-@media(max-width: 600px){
+@media(max-width: 768px){
     .banner h2{
         font-size: 20px;
     }
@@ -195,12 +194,12 @@ footer p {
     }
 }
 
-.logo img{
+/*.logo img{
     display: flex;
     width: 100%;
     object-fit: cover;
     height: 185px;
-}
+}*/
 
 
 /****** CONTACT PAGE *******/
@@ -345,6 +344,8 @@ label {
     align-items: stretch;
     position: relative;
     padding: 1em;
+    height: 380px;
+    box-sizing: border-box;
     border: 2px solid #528728;
     border-radius: 20px;
     text-align: center;
@@ -365,14 +366,16 @@ label {
 .add-to-cart{
     font-weight: 500;
     background: #D9D9D9;
-    padding: 4px;
+    padding: 4px 10px;
     border-radius: 50px;
     margin: 0;
     cursor: pointer;
+    white-space: nowrap;
+    transition: background-color .2s ease;
 }
 
 .add-to-cart:hover{
-    background-color: #528728;
+    background: #528728;
 }
 
 .fa-arrow-up{
@@ -381,7 +384,7 @@ label {
     bottom: -50px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .filters-preferences{
         flex-direction: column;
         gap: 0;
@@ -389,6 +392,10 @@ label {
 
     .matcha-offer{
         flex-direction: column;
+    }
+
+    .matcha_card{
+        height: auto;
     }
 
     .matcha_card img{
@@ -416,15 +423,30 @@ label {
 
 .team-member{
     display: flex;
-    gap:  10px;
-    height: 180px;
+    justify-content: center; /* Center images horizontally */
     margin-top: 1em;
 }
 
 .team-member img {
-    width: 100%;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     object-fit: cover;
+    cursor: pointer;
+    transition: all 0.2s ease; /* Smooth transition */
+}
+
+.team-member-name {
+    position: relative;
+}
+
+.team-member p{
+    font-weight: 500;
+}
+
+.team-member img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px #2D5226;
 }
 
 .about-title{
@@ -481,7 +503,7 @@ label {
     object-fit: cover;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .about-page{
         flex-direction: column;
         margin-inline: 2.5em;
@@ -494,11 +516,27 @@ label {
     .about-banner h4{
         font-size: 20px;
     }
-
-    /*.team-member{
-        flex-direction: column;
-    }*/
     
+    .team-member {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .team-member img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .team-member-name{
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .team-member-name p{
+        font-size: 1.1em;
+        font-style: italic;
+    }
 }
 
 /********* USER PAGE *********/
@@ -610,7 +648,7 @@ h2 {
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    font-size: 14px;
+    font-size: 16px;
     color: #000000;
     transition: bottom 0.3s ease; 
     visibility: hidden; 
@@ -725,5 +763,107 @@ h2 {
     }
     100% {
         transform: translateX(0);
+    }
+}
+
+/******* CLIENT PAGE *******/
+
+.client-section-title{
+    font-size: 1.7em;
+    margin: 1em 0 0;
+}
+
+.client-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+    margin: 2em;
+    height: 100vh;
+}
+
+.client-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #2D5226;
+    background: #fbeedb;
+    text-align: center;
+    padding: 1em;
+}
+
+.client-card h3{
+    white-space: nowrap;
+}
+
+.client-card h3 i{
+    font-size: 1em;
+}
+
+.client-card p {
+    margin: 0;
+    cursor: pointer;
+}
+
+@media (max-width: 768px){
+    .client-section{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-icons p {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: .8em;
+    }
+}
+
+/********* ADMIN PAGE ***********/
+.admin-section{
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em;
+    gap: 1.5em;
+}
+
+.admin-section h1{
+    font-size: 1.6em;
+    margin: 0;
+}
+
+.admin-section img{
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+}
+
+.admin-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #D9D9D9;
+    border-radius: 15px;
+    padding-right: 2em;
+    box-shadow: 1px 5px 7px 0px rgb(135 123 123 / 71%);
+}
+
+.buttons-card button{
+    padding: .7em 1.5em;
+    border: none;
+    background: #2D5226;
+    font-size: .9em;
+    font-weight: 600;
+}
+
+.buttons-card .fa-trash{
+    font-size: 1em;
+}
+
+@media(max-width: 768px){
+    .admin-card{
+        flex-direction: column;
+        padding-bottom: 2em;
+        padding-right: 0;
     }
 }

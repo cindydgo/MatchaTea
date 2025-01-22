@@ -17,28 +17,72 @@
             <div class="nav-bar">
                 <i class="fa-solid fa-bars"></i>
                 <ul class="left-menu">
-                    <li>
-                        <a href="./vente.html">
-                            Tout nos produits
-                        </a>
-                    </li>
-                    <li>Thés</li>
-                    <li>Accessoires</li>
-                    <li>Matcha</li>
+                    <li><a href="#">Tableau de bord</a></li>
+                    <li><a href="#">Gestion des produits</a></li>
+                    <li><a href="#">Commandes</a></li>
+                    <li><a href="#">Utilisateurs</a></li>
+                    <li><a href="#">Paramètres</a></li>
                 </ul>
                 <a href="./index.html" class="logo">
                     <img src="../assets/Logo_Matcha_Tea.png" alt="logo">
                 </a>
                 <div class="nav-icons">
                     <p>Hello, Admin !</p>
+                    <a href="./index.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </a>
                     <i class="fa-solid fa-cart-shopping"></i>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <section>
-            
+        <section class="admin-section">
+            <h1>Gestion des produits</h1>
+            <div class="admin-card">
+                <img src="../assets/fouet_matcha.png" alt="fouet pour thé matcha en bambou">
+                <p>Fouet pour thé matcha en bambou</p>
+                <div class="buttons-card">
+                    <button>Modifier</button>
+                    <button>
+                        Supprimer
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="admin-card">
+                <img src="../assets/matcha3.png" alt="Thé Matcha à la fraise">
+                <p>Thé Matcha à la fraise</p>
+                <div class="buttons-card">
+                    <button>Modifier</button>
+                    <button>
+                        Supprimer
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="admin-card">
+                <img src="../assets/matcha-imperial-bio.png" alt="Thé Matcha impérial bio">
+                <p>Thé Matcha impérial bio</p>
+                <div class="buttons-card">
+                    <button>Modifier</button>
+                    <button>
+                        Supprimer
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="admin-card">
+                <img src="../assets/pink_matcha.png" alt="Pink matcha">
+                <p>Pink matcha</p>
+                <div class="buttons-card">
+                    <button>Modifier</button>
+                    <button>
+                        Supprimer
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </div>  
         </section>
     </main>
     <footer>
@@ -58,8 +102,24 @@
                             À propos de nous
                         </a>
                     </p>
+                    <p>
+                        <a href="./contact.html">
+                            Contact
+                        </a>
+                    </p>
                 </div>
         </section>
     </footer>
+    <script>
+        document.querySelector('.fa-bars').addEventListener('click', function() {
+            const leftMenu = document.querySelector('.left-menu');
+            // Toggle the sliding menu
+            if (leftMenu.style.left === '0px') {
+                leftMenu.style.left = '-350px'; // Slide out (off-screen)
+            } else {
+                leftMenu.style.left = '0px'; // Slide in (visible)
+            }
+        });
+    </script>
 </body>
 </html>
