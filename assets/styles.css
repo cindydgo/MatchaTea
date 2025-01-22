@@ -594,15 +594,10 @@ input[type=password],input[type=email]{
 
 /******** HISTORY PAGE ********/
 
-h1 {
-    text-align: center;
-    font-size: 30px;
-
-}
-
-h2 {
+h1,h2 {
     text-align: center;
     font-size: 24px;
+    margin: 20px 0;
 }
 
 .presentation {
@@ -614,11 +609,11 @@ h2 {
 .block {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    grid-gap: 20px;
     justify-self: center;
     padding: 10px;
+    position: relative;
+    overflow: hidden;
 }
 
 .border {
@@ -650,8 +645,8 @@ h2 {
     width: 100%;
     font-size: 16px;
     color: #000000;
-    transition: bottom 0.3s ease; 
-    visibility: hidden; 
+    transition: bottom 0.3s ease;
+    visibility: hidden;
 }
 
 .border:hover .main-text {
