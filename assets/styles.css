@@ -1,7 +1,7 @@
 body{
     font-family: "Jost", serif;
     margin: 0;
-    max-width: 1400px;
+   /* max-width: 1400px;*/
 }
 
 a {
@@ -209,4 +209,178 @@ label {
     position: absolute;
     right: 0;
     bottom: -50px;
+}
+
+/*PARTIE HISTOIRE*/
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+.presentation {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-self: center;
+    padding: 10px;
+}
+
+.border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 300px;
+    height: 50px;
+    border: 2px solid #52B43F;
+    color: #000000;
+    position: relative; 
+    overflow: hidden; 
+    text-align: center;
+}
+
+.main-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.hover-text {
+    position: absolute;
+    bottom: -100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    font-size: 14px;
+    color: #000000;
+    transition: bottom 0.3s ease; 
+    visibility: hidden; 
+}
+
+.border:hover .main-text {
+    visibility: hidden; 
+}
+
+.border:hover .hover-text {
+    bottom: 30px; 
+    visibility: visible; 
+}
+
+@media screen and (max-width: 768px) {
+    .block {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .block {
+        grid-template-columns: 1fr;
+    }
+}
+
+.intro {
+    background-color: #ffffff;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro h1 {
+    font-size: 24px;
+    color: #4CAF50; 
+}
+
+.intro p {
+    font-size: 18px;
+    color: #777;
+    line-height: 1.6;
+}
+
+.valeurs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.valeur {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 15px;
+    width: 45%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valeur h2 {
+    font-size: 24px;
+    color: #52B43F; 
+}
+
+.valeur p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Animation des valeurs */
+.valeur:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Carrousel d'images */
+
+.carrousel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrousel-images {
+    display: flex;
+    animation: defilement 30s linear infinite;
+}
+
+.carrousel-images img {
+    width: 33.33%; 
+    height: 300px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+@keyframes defilement {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-33.33%);
+    }
+    50% {
+        transform: translateX(-66.66%);
+    }
+    75% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
