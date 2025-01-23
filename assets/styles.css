@@ -658,18 +658,6 @@ h1,h2 {
     visibility: visible; 
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    .block {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .block {
-        grid-template-columns: 1fr;
-    }
-}
-
 .intro {
     background-color: #ffffff;
     padding: 40px;
@@ -719,6 +707,7 @@ h1,h2 {
 }
 
 /* Animation des valeurs */
+
 .valeur:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -758,6 +747,69 @@ h1,h2 {
     }
     100% {
         transform: translateX(0);
+    }
+}
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 1024px) {
+    /* Tablettes : 2 colonnes pour blocs + valeurs */
+    .block {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .valeur {
+        width: 48%;  /* 2 colonnes, + d'espace entre les cartes */
+    }
+
+    .carrousel-images img {
+        width: 50%;  /* 2 images sur tablette */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Tablette */
+    .block {
+        grid-template-columns: repeat(2, 1fr);  /* 2 colonnes */
+    }
+
+    .valeur {
+        width: 100%;  /* 1 colonne, valeurs sur toute la largeur */
+    }
+
+    .carrousel-images img {
+        width: 100%;  /* 1 image à la fois dans le carrousel */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Smartphones */
+    .block {
+        grid-template-columns: 1fr;  /* 1 colonne */
+    }
+
+    .presentation {
+        font-size: 16px;  /* Texte plus petit sur smartphone */
+    }
+
+    .intro h1 {
+        font-size: 20px;  
+    }
+
+    .intro p {
+        font-size: 14px;  
+    }
+
+    .valeur {
+        width: 100%;  /* Chaque carte prend toute la largeur */
+        margin: 10px 0;
+        padding: 20px;  
+    }
+
+    .carrousel-images img {
+        width: 100%;  /* 1 image pleine largeur sur smartphone */
+        height: auto;  
     }
 }
 
